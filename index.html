@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio - Software Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #34495e;
+            --secondary-color: #27ae60;
+            --accent-color: #f39c12;
+            --text-color: #2c3e50;
+            --bg-color: #ecf0f1;
+        }
+
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .bg-accent {
+            background-color: var(--accent-color);
+        }
+
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        .text-secondary {
+            color: var(--secondary-color);
+        }
+
+        .text-accent {
+            color: var(--accent-color);
+        }
+
+        .text-light {
+            color: white;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .card {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(135deg, #e6e6e6, #ffffff);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card:hover p {
+            color: var(--text-color);
+        }
+
+        .card:nth-child(odd) {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .card:nth-child(even) {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        button,
+        a {
+            transition: all 0.3s ease;
+        }
+
+        .focus\:ring-secondary:focus {
+            --tw-ring-color: var(--secondary-color);
+        }
+
+        .profile-picture {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        @media (min-width: 768px) {
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem; /* Optional: to match the card's border radius */
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .learn-more-btn {
+            margin-top: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-bg-color text-text-color">
+    <header class="bg-primary py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold text-light">My Portfolio</h1>
+            <nav>
+                <ul class="flex space-x-4 text-lg">
+                    <li><a href="#about" class="text-light hover:text-secondary">About</a></li>
+                    <li><a href="#skills" class="text-light hover:text-secondary">Skills</a></li>
+                    <li><a href="#projects" class="text-light hover:text-secondary">Projects</a></li>
+                    <li><a href="#contact" class="text-light hover:text-secondary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <!-- Hero Section -->
+        <section id="hero" class="text-center my-8">
+            <img src="DP1.jpeg" alt="Profile Picture" class="profile-picture mx-auto">
+            <h2 class="text-3xl font-bold mt-4 text-primary">Hello, I'm Abner benitto!</h2>
+            <p class="text-lg mt-2 text-gray-700">A Software Engineer specializing in AI, prompt engineering, and Java development.</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="my-8">
+            <h2 class="text-2xl font-bold mb-4 text-primary">About Me</h2>
+            <p class="text-gray-700 leading-relaxed">With a passion for technology and problem-solving, I have dedicated my career to developing innovative software solutions. My expertise spans across AI, prompt engineering, and Java development, where I enjoy transforming complex challenges into practical solutions.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="my-8">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2 text-primary">Artificial Intelligence</h3>
+                    <p class="text-gray-700">Developing AI models and applications using Python, TensorFlow, and PyTorch.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2 text-primary">Prompt Engineering</h3>
+                    <p class="text-gray-700">Creating effective prompts for AI models to optimize performance and accuracy.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2 text-primary">Java Development</h3>
+                    <p class="text-gray-700">Building robust applications with Java, Spring Boot, and related technologies.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2 text-primary">Web Development</h3>
+                    <p class="text-gray-700">Creating responsive and dynamic websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2 text-primary">Data Analysis</h3>
+                    <p class="text-gray-700">Analyzing and visualizing data to extract insights and drive decision-making.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-lg font-bold mb-2 text-primary">Cloud Computing</h3>
+                    <p class="text-gray-700">Deploying and managing applications on cloud platforms like AWS and Azure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="my-8">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card project-card">
+                    <img src="Robotics.jpg" alt="Robotics Project" class="w-full h-48 object-cover rounded">
+                    <h3 class="text-lg font-bold mt-4 text-primary">Robotics</h3>
+                    <a href="robotics_project.pdf" class="text-secondary hover:underline learn-more-btn md:inline-block md:mt-0 px-4 py-2 rounded bg-primary text-light transition-colors duration-300 hover:bg-secondary" target="_blank">Learn More</a>
+                </div>
+                <div class="card project-card">
+                    <img src="Renewable_energy.jpg" alt="Renewable Energy Project" class="w-full h-48 object-cover rounded">
+                    <h3 class="text-lg font-bold mt-4 text-primary">Renewable Energy</h3>
+                    <a href="Renewable_energy_project.pdf" class="text-secondary hover:underline learn-more-btn md:inline-block md:mt-0 px-4 py-2 rounded bg-primary text-light transition-colors duration-300 hover:bg-secondary" target="_blank">Learn More</a>
+                </div>
+                <div class="card project-card">
+                    <img src="software.jpg" alt="Software Development Project" class="w-full h-48 object-cover rounded">
+                    <h3 class="text-lg font-bold mt-4 text-primary">Software Development</h3>
+                    <a href="software_project.pdf" class="text-secondary hover:underline learn-more-btn md:inline-block md:mt-0 px-4 py-2 rounded bg-primary text-light transition-colors duration-300 hover:bg-secondary" target="_blank">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="my-8">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Contact Me</h2>
+            <form id="contactForm" class="bg-white p-6 rounded-lg shadow">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:ring-opacity-50">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:ring-opacity-50">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:ring-opacity-50"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="file" class="block text-gray-700">Upload an Image</label>
+                    <input type="file" id="file" name="file" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-secondary focus:ring-opacity-50">
+                </div>
+                <button type="submit" class="bg-secondary text-white px-4 py-2 rounded-md hover:bg-primary transition-colors duration-300">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-primary shadow p-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
+            <div>
+                <h4 class="text-lg font-bold mb-2 text-light">About</h4>
+                <p class="text-gray-200">I am a passionate software engineer specializing in AI, prompt engineering, and Java development. I love creating solutions that make a difference.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-2 text-light">Contact</h4>
+                <p class="text-gray-200">Email: abnerbenitto@gmail.com</p>
+                <p class="text-gray-200">Phone: (123) 456-7890</p>
+                <p class="text-gray-200">Location: Chennai, India</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-2 text-light">Follow Me</h4>
+                <ul class="flex justify-center md:justify-end space-x-4">
+                    <li><a href="https://www.linkedin.com/in/abner-benitto-697664264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-200 hover:text-secondary">LinkedIn</a></li>
+                    <li><a href="https://github.com/abnerbenitto" class="text-gray-200 hover:text-secondary">GitHub</a></li>
+                    <li><a href="https://x.com/?lang=en-in" class="text-gray-200 hover:text-secondary">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-4 text-center text-gray-400">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
